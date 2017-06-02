@@ -29,4 +29,8 @@ class Movie
     avg_rating.round(1)
   end
 
+  def self.highest_rated
+    Movie.all.max_by {|movie| movie.average_rating}
+  end
+
 end
